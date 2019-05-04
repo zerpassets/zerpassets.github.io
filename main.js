@@ -40,7 +40,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    // { path: '', redirectTo: 'pages', pathMatch: 'full' },
+    { path: '', redirectTo: 'pages', pathMatch: 'full' },
     { path: '**', redirectTo: 'pages' }
 ];
 var config = {
@@ -1152,11 +1152,6 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [
     {
         path: '',
-        component: _pages_component__WEBPACK_IMPORTED_MODULE_3__["PagesComponent"],
-        children: [{ path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"] }]
-    },
-    {
-        path: ':input',
         component: _pages_component__WEBPACK_IMPORTED_MODULE_3__["PagesComponent"],
         children: [{ path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"] }]
     }
