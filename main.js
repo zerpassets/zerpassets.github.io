@@ -418,9 +418,11 @@ var CurrencyService = /** @class */ (function () {
     CurrencyService_1 = CurrencyService;
     CurrencyService.prototype.getAll = function () {
         return this.httpClient.get(CurrencyService_1.ENDPOINT).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (data) { return data.rates; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (data) {
-            return Object.keys(data).map(function (key, index) {
+            return Object.keys(data)
+                .map(function (key, index) {
                 return new _currency__WEBPACK_IMPORTED_MODULE_1__["Currency"]().deserialize({ symbol: key, value: data[key] });
-            });
+            })
+                .sort(function (a, b) { return a.symbol.localeCompare(b.symbol); });
         }));
     };
     var CurrencyService_1;
